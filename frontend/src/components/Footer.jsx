@@ -1,13 +1,14 @@
 import "react";
-import Adalab from "../images/logo-adalab.webp";
 import "../styles/footer.css";
 
 const Footer = () => {
-  return (
-    <div className="footer">
-      <img src={Adalab} alt="logo adalab" className="img-footer" />
-    </div>
-  );
+    return (
+        <div className="footer">
+            <p className="footer-text">
+                © 2025 TechTronic. Todos los derechos reservados.
+            </p>
+        </div>
+    );
 };
 
 export default Footer;

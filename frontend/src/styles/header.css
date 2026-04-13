@@ -1,100 +1,90 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-  padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    border-bottom: 1px solid #ccc;
 }
 
 .header img {
-  width: 150px;
-  height: auto;
+    width: 20px;
+    height: auto;
 }
 
-.home-link {
-  text-decoration: none;
-  color: white;
-}
-
-.home-link img {
-  width: 60px;
-  height: 60px;
-}
-
-.home-text {
-  font-size: 20px;
-  font-weight: 100;
-  margin-left: 10px;
+.corp-text {
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: 10px;
 }
 
 .header-left {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
-.header-left img {
-  height: auto;
+.nav-text {
+    text-align: center;
+    padding: 0 16px;
+    gap: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
 }
-
-.header-text {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  text-align: center;
-  margin-top: 20px;
-  padding: 0 16px;
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 100;
 }
-
-.header-text h1 {
-  margin: 15px;
-  font-size: 2rem;
-}
-
-.header-text p {
-  font-size: 25px;
-  font-weight: 100;
-  text-align: center;
-  margin-bottom: 30px;
+.shop-btn {
+    background-color: #5b5959;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
 /* MÓVIL */
 @media (max-width: 420px) {
-  .header {
-    padding: 15px;
-  }
+    .header {
+        padding: 15px;
+    }
 
-  .home-link img {
-    width: 45px;
-    height: 45px;
-  }
+    .home-link img {
+        width: 45px;
+        height: 45px;
+    }
 
-  .home-text {
-    font-size: 16px;
-    margin-left: 8px;
-  }
+    .home-text {
+        font-size: 16px;
+        margin-left: 8px;
+    }
 
-  .header .adalab-logo {
-    width: 100px;
-  }
+    .header .adalab-logo {
+        width: 100px;
+    }
 
-  .header-text h1 {
-    font-size: 1.8rem;
-    margin: 10px;
-  }
+    .header-text h1 {
+        font-size: 1.8rem;
+        margin: 10px;
+    }
 
-  .header-text p {
-    font-size: 18px;
-    line-height: 1.4;
-  }
+    .header-text p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
 }
 
 /* TABLET PEQUEÑA */
 @media (max-width: 560px) {
-  .header-text h1 {
-    font-size: 1.5rem;
-  }
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
 
-  .header-text p {
-    font-size: 20px;
-  }
+    .header-text p {
+        font-size: 20px;
+    }
 }

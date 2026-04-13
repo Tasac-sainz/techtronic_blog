@@ -1,11 +1,12 @@
 .footer {
-  display: flex;
-  justify-content: center;
-  align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    border-top: 1px solid #ccc;
 }
 
-.img-footer {
-  width: 123px;
-  height: 46px;
-  margin: 10px 0 20px 0;
+.footer-text {
+    padding: 15px 0 10px 0;
+    font-size: 15px;
+    font-weight: 100;
 }

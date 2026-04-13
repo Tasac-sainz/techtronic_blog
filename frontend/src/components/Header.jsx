@@ -1,27 +1,30 @@
 import "react";
 import { Link } from "react-router-dom";
-import Logo from "../images/logo.png";
-import Adalab from "../images/logo-adalab.webp";
+import Logo from "../images/storm.png";
 import "../styles/header.css";
 
 const Header = () => {
-  return (
-    <>
-      <div className="header">
-        <Link to="/" className="home-link">
-          <div className="header-left">
-            <img src={Logo} alt="Logo" />
-            <p className="home-text">Proyectos molones</p>
-          </div>
-        </Link>
-        <img src={Adalab} alt="Adalab" className="adalab-logo" />
-      </div>
-      <div className="header-text">
-        <h1>Proyectos Molones</h1>
-        <p>Escaparate en línea para recoger ideas a través de la tecnología</p>
-      </div>
-    </>
-  );
+    return (
+        <>
+            <div className="header">
+                <div className="header-left">
+                    <img src={Logo} alt="Logo" />
+                    <p className="corp-text">Blog de TechTronic</p>
+                </div>
+
+                <nav className="nav-text">
+                    <a href="#">Inicio</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Productos</a>
+                    <a href="#">Sobre nosotros</a>
+                    <a href="#">Contacto</a>
+                    <a href="#" className="shop-btn">
+                        Tienda
+                    </a>
+                </nav>
+            </div>
+        </>
+    );
 };
 
 export default Header;
