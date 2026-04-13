@@ -1,2 +1,3 @@
-# techtronic_blog
+# Techinical test for TechTronic: blog´s landing
+
 Technical test for TechTronic consisting of making a landing page for their blog
