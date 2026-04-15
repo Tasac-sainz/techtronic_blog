@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import "../styles/cityFilter.css";
 
 const CityFilter = ({ onCitySubmit }) => {
     const [inputValue, setInputValue] = useState("");
@@ -14,17 +15,18 @@ const CityFilter = ({ onCitySubmit }) => {
     };
 
     return (
-        <div className="city-filter">
-            <form onSubmit={handleSubmit} className="city-form">
-                <input
-                    type="text"
-                    placeholder="Ingrese una ciudad"
-                    value={inputValue}
-                    onChange={handleChange}
-                />
-                <button type="submit">Buscar</button>
-            </form>
-        </div>
+        <form onSubmit={handleSubmit} className="city-form">
+            <input
+                type="text"
+                placeholder="Ingrese una ciudad"
+                value={inputValue}
+                onChange={handleChange}
+                className="city-input"
+            />
+            <button type="submit" className="city-button">
+                🔍
+            </button>
+        </form>
     );
 };
 

@@ -9,9 +9,12 @@ const HomePage = () => {
     return (
         <>
             <Header />
-            <ListArticles />
-            <Weather />
-
+            <div className="main">
+                <ListArticles />
+                <aside className="weather-aside">
+                    <Weather />
+                </aside>
+            </div>
             <Footer />
         </>
     );
