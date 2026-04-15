@@ -1,16 +1,50 @@
-.list-articles {
+.news-contain {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 60px;
     padding: 20px;
-    margin: 20px;
+    margin: 0 20px 40px 20px;
 }
-li {
-    list-style: none;
-    background-color: #f0f0f0;
-    padding: 15px;
+.news-article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
     margin: 20px;
     border-radius: 8px;
+    background-color: #f0f0f0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.little {
+    display: flex;
+    gap: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+.category {
+    background-color: #0a2848;
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 40px 60px 20px 60px;
+}
+
+.more-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0a2848;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.more-btn:hover {
+    background-color: #0a2848cc;
 }

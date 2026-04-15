@@ -1,8 +1,9 @@
 import "react";
 import Header from "../components/Header";
-import ListArticles from "../components/ListAricles";
+import ListArticles from "../components/ListArticles";
 import Footer from "../components/Footer";
 import Weather from "../components/Weather";
+import MoreArticles from "../components/MoreArticles";
 import "../index.css";
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
                     <Weather />
                 </aside>
             </div>
+            <MoreArticles />
             <Footer />
         </>
     );

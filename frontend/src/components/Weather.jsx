@@ -19,14 +19,30 @@ function Weather() {
 
     if (!weather) return <p>Cargando...</p>;
 
+    const now = new Date();
+
+    const formattedDateTime = new Intl.DateTimeFormat("es-ES", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+    }).format(now);
+
     return (
         <>
             <span className="weather-cont">
                 <CityFilter onCitySubmit={setCity} />
                 <aside className="weather-widget">
                     <h3 className="city-name">{weather.name}</h3>
+                    <p className="small-widget-data">{formattedDateTime}</p>
+                    <p className="small-widget-data">
+                        Sensación térmica: {Math.round(weather.main.feels_like)}
+                        °C
+                    </p>
 
-                    <p>{Math.round(weather.main.temp)}°C</p>
+                    <p className="temp">{Math.round(weather.main.temp)}°C</p>
 
                     <p style={{ textTransform: "capitalize" }}>
                         {weather.weather[0].description}

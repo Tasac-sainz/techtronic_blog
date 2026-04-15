@@ -2,12 +2,8 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const path = require("path");
-// aquí van los controllers //
-const {
-    getProjectsController, //esto es un controller igual que los siguientes
-    getProjectByIdController,
-    addProjectsController,
-} = require("./controllers");
+const { getLatestNews } = require("../src/controllers/newsController");
+const { allNews } = require("../src/controllers/allNewsController");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -19,9 +15,8 @@ app.use(cors());
 // Endpoints
 
 // ENDPOINT PARA COGER LOS PROYECTOS (en este ejemplo, cambiar por los endpoints que correspondan)
-app.get("/api/projects", getProjectsController);
-app.get("/api/project/:id", getProjectByIdController);
-app.post("/api/project", addProjectsController);
+app.get("/api/news/latest", getLatestNews);
+app.get("/api/news", allNews);
 
 // Ruta a los archivos estáticos del build
 const publicPath = path.join(__dirname, "../../frontend/dist");
