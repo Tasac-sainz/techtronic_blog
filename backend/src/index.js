@@ -4,6 +4,7 @@ const cors = require("cors");
 const path = require("path");
 const { getLatestNews } = require("../src/controllers/newsController");
 const { allNews } = require("../src/controllers/allNewsController");
+const { getCategories } = require("../src/controllers/categoriesController");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,10 +14,9 @@ app.use(express.json({ limit: "25mb" }));
 app.use(cors());
 
 // Endpoints
-
-// ENDPOINT PARA COGER LOS PROYECTOS (en este ejemplo, cambiar por los endpoints que correspondan)
 app.get("/api/news/latest", getLatestNews);
 app.get("/api/news", allNews);
+app.get("/api/categories", getCategories);
 
 // Ruta a los archivos estáticos del build
 const publicPath = path.join(__dirname, "../../frontend/dist");
