@@ -27,5 +27,5 @@ app.get("/*splat", (req, res) => {
 });
 // Configuración para escuchar en el puerto definido
 app.listen(PORT, () => {
-    console.log(`Example app listening on port ${PORT}`);
+    console.log(`Servidor corriendo en el puerto ${PORT}`);
 });

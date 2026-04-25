@@ -5,18 +5,48 @@ import "../styles/weather.css";
 
 function Weather() {
     const [weather, setWeather] = useState(null);
-    const [city, setCity] = useState("Madrid");
+    const [error, setError] = useState(null);
+    const [city, setCity] = useState("");
 
+    // CASO 1: NO hay ciudad, se pide ubicación actual
     useEffect(() => {
-        getWeather(city)
-            .then((data) => {
-                setWeather(data);
-            })
-            .catch((error) => {
-                console.error(error);
-            });
+        if (city) return; // Si hay ciudad, no se pide ubicación actual
+
+        navigator.geolocation.getCurrentPosition(
+            // Recurre a la API de geolocalización del navegador
+            async (position) => {
+                try {
+                    const { latitude, longitude } = position.coords;
+                    const data = await getWeather(latitude, longitude);
+                    setWeather(data);
+                } catch {
+                    setError("No se pudo obtener ubicación actual.");
+                }
+            },
+            () => {
+                setError("No se pudo obtener ubicación actual.");
+            },
+        );
     }, [city]);
 
+    // CASO 2: Hay ciudad, se obtiene clima de esa ciudad
+
+    useEffect(() => {
+        if (!city) return; // Si no hay ciudad, no se hace nada
+
+        const fetchCityWeather = async () => {
+            try {
+                const data = await getWeather(city);
+                setWeather(data);
+            } catch {
+                setError("No se pudo obtener el clima de la ciudad.");
+            }
+        };
+
+        fetchCityWeather();
+    }, [city]);
+
+    if (error) return <p>{error}</p>;
     if (!weather) return <p>Cargando...</p>;
 
     const now = new Date();
