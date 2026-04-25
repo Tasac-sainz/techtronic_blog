@@ -23,12 +23,18 @@ body {
     html {
         font-size: 11px;
     }
+    .nav-text {
+        display: none;
+    }
 }
 
 /* Móvil */
 @media screen and (min-width: 420px) {
     html {
         font-size: 12px;
+    }
+    .nav-text {
+        display: none;
     }
 }
 
@@ -43,6 +49,9 @@ body {
 @media screen and (min-width: 768px) {
     html {
         font-size: 16px;
+    }
+    .nav-text {
+        display: flex;
     }
 }
 .main {
@@ -60,4 +69,18 @@ body {
 .weather-aside {
     flex: 1;
     top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .weather-aside {
+        order: -1;
+        width: 100%;
+    }
+    .nav-text {
+        display: none;
+    }
 }

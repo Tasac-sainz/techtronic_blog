@@ -74,7 +74,10 @@ function Weather() {
 
                     <p className="temp">{Math.round(weather.main.temp)}°C</p>
 
-                    <p style={{ textTransform: "capitalize" }}>
+                    <p
+                        style={{ textTransform: "capitalize" }}
+                        className="weather-descrip"
+                    >
                         {weather.weather[0].description}
                     </p>
 

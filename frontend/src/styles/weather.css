@@ -33,3 +33,57 @@
     font-weight: 600;
     margin: 10px 0 10px 0;
 }
+
+@media (max-width: 700px) {
+    .weather-cont {
+        margin-top: 80px;
+        margin-right: 0;
+    }
+    .weather-widget {
+        width: 90%;
+    }
+    .categories {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .weather-widget {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        width: 90%;
+    }
+
+    /* ocultamos datos secundarios */
+    .small-widget-data {
+        display: none;
+    }
+
+    /* ocultamos descripción del clima */
+    .weather-descrip {
+        display: none;
+    }
+
+    /* ciudad más pequeña */
+    .city-name {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    /* temperatura más compacta */
+    .temp {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    /* icono más pequeño */
+    .weather-widget img {
+        width: 40px;
+        height: 40px;
+    }
+    .categories {
+        display: none;
+    }
+}

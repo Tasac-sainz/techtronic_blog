@@ -18,7 +18,7 @@ const CityFilter = ({ onCitySubmit }) => {
         <form onSubmit={handleSubmit} className="city-form">
             <input
                 type="text"
-                placeholder="Consulta una ciudad"
+                placeholder="Busca la ciudad que quieras..."
                 value={inputValue}
                 onChange={handleChange}
                 className="city-input"
