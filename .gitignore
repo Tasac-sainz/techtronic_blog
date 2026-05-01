@@ -137,3 +137,7 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Imágenes de conexión
+conexión_techtronic_TiDB.png
+parámteros_conexión_local_techtronic.png

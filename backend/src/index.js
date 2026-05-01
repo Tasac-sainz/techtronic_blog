@@ -18,7 +18,7 @@ app.get("/api/news/latest", getLatestNews);
 app.get("/api/news", allNews);
 app.get("/api/categories", getCategories);
 
-// Ruta a los archivos estáticos del build
+// Ruta a los archivos estáticos del build sin necesidad de copiar la carpeta dist en backend ni renombrarla como public.
 const publicPath = path.join(__dirname, "../../frontend/dist");
 app.use(express.static(publicPath));
 // Cualquier ruta del frontend → index.html

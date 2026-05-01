@@ -46,3 +46,7 @@ out/
 
 # Archivos del sistema
 Thumbs.db
+
+# Imágenes de conexión
+conexión_techtronic_TiDB.png
+parámteros_conexión_local_techtronic.png
