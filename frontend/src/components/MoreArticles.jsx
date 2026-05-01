@@ -6,7 +6,7 @@ function MoreArticles() {
     const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/news")
+        fetch("https://techtronic-blog.onrender.com/api/news")
             .then((res) => res.json())
             .then((data) => setNews(data))
             .catch((err) => console.error(err));

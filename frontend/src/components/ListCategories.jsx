@@ -7,7 +7,9 @@ const ListCategories = () => {
     useEffect(() => {
         const getCategories = async () => {
             try {
-                const res = await fetch("http://localhost:3000/api/categories");
+                const res = await fetch(
+                    "https://techtronic-blog.onrender.com/api/categories",
+                );
                 const data = await res.json();
 
                 setCategories(data);

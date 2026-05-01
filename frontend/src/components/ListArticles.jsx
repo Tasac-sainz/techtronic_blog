@@ -5,7 +5,7 @@ function ListArticles() {
     const [news, setNews] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/api/news/latest")
+        fetch("https://techtronic-blog.onrender.comapi/news/latest")
             .then((res) => res.json())
             .then((data) => setNews(data))
             .catch((err) => console.error(err));
