@@ -2,12 +2,14 @@
     "name": "fullstack-react-starter-kit",
     "private": true,
     "version": "0.0.0",
+    "homepage": "https://Tasac-sainz.github.io/techtronic_blog",
     "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
         "lint": "eslint .",
         "preview": "vite preview",
+        "predeploy": "npm run build",
         "deploy": "gh-pages -d dist"
     },
     "dependencies": {
