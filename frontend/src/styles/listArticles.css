@@ -48,3 +48,15 @@
 .more-btn:hover {
     background-color: #0a2848cc;
 }
+.loading {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+    padding: 2rem;
+}

@@ -3,12 +3,16 @@ import "../styles/listArticles.css";
 
 function ListArticles() {
     const [news, setNews] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch("https://techtronic-blog.onrender.com/api/news/latest")
             .then((res) => res.json())
-            .then((data) => setNews(data))
-            .catch((err) => console.error(err));
+            .then((data) => {
+                setNews(data);
+            })
+            .catch((err) => console.error(err))
+            .finally(() => setLoading(false));
     }, []);
 
     return (
@@ -22,17 +26,30 @@ function ListArticles() {
                     </p>
                 </div>
                 <div className="news-contain">
-                    {news.map((item) => (
-                        <article key={item.id} className="news-article">
-                            <span className="little">
-                                <p className="category">{item.category}</p>
-                                <time dateTime={item.fecha}>{item.fecha}</time>
-                            </span>
+                    {loading ? (
+                        <p className="loading">
+                            Cargando artículos... La primera carga puede tardar
+                            unos segundos.
+                        </p>
+                    ) : news.length > 0 ? (
+                        news.map((item) => (
+                            <article key={item.id} className="news-article">
+                                <span className="little">
+                                    <p className="category">{item.category}</p>
+                                    <time dateTime={item.fecha}>
+                                        {item.fecha}
+                                    </time>
+                                </span>
 
-                            <h3>{item.headline}</h3>
-                            <p>{item.news}</p>
-                        </article>
-                    ))}
+                                <h3>{item.headline}</h3>
+                                <p>{item.news}</p>
+                            </article>
+                        ))
+                    ) : (
+                        <p className="loading">
+                            No hay artículos disponibles en este momento.
+                        </p>
+                    )}
                 </div>
             </section>
         </>
